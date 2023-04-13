@@ -1,0 +1,4 @@
+GitPython
+astunparse
+openai
+prettytable
