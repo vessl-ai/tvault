@@ -1,5 +1,3 @@
-# `tvault` by VESSL
-
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/97027715/232697803-3571bd58-8d4a-4c42-adba-96f300ef72c4.png" width="35%">
