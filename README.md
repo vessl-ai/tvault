@@ -1,56 +1,53 @@
-# tvault
-Local ml model registry with model diff for efficient model development.
+# `tvault` by VESSL
 
-# QuickStart
-Install tvault using PyPI:
-`pip install tvault`
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/97027715/232697803-3571bd58-8d4a-4c42-adba-96f300ef72c4.png" width="35%">
+    <img alt="SkyPilot" src="https://user-images.githubusercontent.com/97027715/232697811-f0a666a6-acbd-43a9-8af9-dea3e7cc0936.png" width="35%">
+  </picture>
+</p>
 
-## Logging
+<p align="center">
+    <a target="_blank" href="https://www.linkedin.com/company/vesslai"><img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social"></a>&nbsp;
+    <a target="_blank" href="https://vesslai.medium.com/"><img src="https://img.shields.io/badge/style--5eba00.svg?label=Medium&logo=medium&style=social"></a>&nbsp;
+    <a target="_blank" href="https://www.youtube.com/@vesslai4254"><img src="https://img.shields.io/badge/style--5eba00.svg?label=YouTube&logo=youtube&style=social"></a>&nbsp;
+    <a target="_blank" href="https://join.slack.com/t/vessl-ai-community/shared_invite/zt-1a6schu04-NyjRKE0UMli58Z_lthBICA"><img src="https://img.shields.io/badge/Slack-Join-4A154B?logo=slack&style=social"></a>&nbsp;  
+</p>
 
-After your model training, make your model local registry using:
+<h3 align="center">
+    Compare and store models in a local, lightweight registry
+</h3>
 
-`tvault.log_all(model, tags=tags, result=acc.item(), optimizer=optimizer)`
+----
 
-tvault will automatically detect necessary components (related source code) and build model registry.
+### The challenges we are tackling
 
-You can add your custom tags which will reside within model registry.
+`tvault` is designed to help academic researchers iterate their models faster without the logging overhead. 
 
-(i.e. `tags = {"language": "pytorch", "learning_rate": learning_rate}`)
+Many of the academic researchers we encounter simply want to *get going* with minimum setup and configurations. This often means using local codebase as opposed to integrating tools like [VESSL Experiments](https://docs.vessl.ai/api-reference/python-sdk/utils/vessl.log) and Weights & Biases to git-committed code. 
 
-## Searching
+`tvault` is "git diff for ML" &mdash; a simple, lightweight framework for quickly tracking and comparing ML workloads in a local model registry. 
 
-After model registries have been made, there are three ways to look desired experiments.
+* Track and version models locally with `tvault.log_all()`
+* Get a birds-eye differences of two workloads with `tvault --diff_flag`
 
-- `tvault --find_flag --condition hash --hash yourhash`
+Get started with pip install:
+```
+pip install tvault
+```
 
-Provides all model registries under the git commit hash. Multiple registries under same git commit are differentiated using model index.
+For those who are already using VESSL Python SDK and CLI,
+```
+pip install "vessl[tvault]"
+```
 
-- `tvault --find_flag --condition result --min yourmin --max yourmax`
+Follow our guide below with our [MNIST example code](https://github.com/saeyoon17/mnist-tvault-example/blob/main/train.py). 
 
-Provides all model registries that have result value between certain boundary.
+----
 
-- `tvault --find_flag --condition tag --tag_type yourtag --tag tagcontent`
+### Getting started
 
-Provies all model registries that have value `tagcontent` under tag `yourtag`.
-
-## Comparing diffs
-A naive approach for debugging model performance is to look at the git hash, and use git diff to see what parts have been changed. This causes time overhead. At the same time, git diff across time usually contains changes that are not directly connected to model performance.
-
-When creating model registry, tvault filters source parts that are related to model itself. Therefore, it can show diffs of source codes that are directly related to your model. 
-
-Once you have located two models (commit hash, model index)s, use following command:
-
-`tvault --diff_flag --sha1 hash1 --index1 index1 --sha2 hash2 --index2 index2`
-
-The command will automatically provide diffs that are related to model. Specifically, we provide diffs between:
-
-- model architecture (using pytorch model __repr__)
-- model class source
-- external functions defined in each model class
-
-Visit the following links for more detailed example usage.
-- [MNIST using ResNet-18](https://github.com/saeyoon17/mnist-tvault-example)
-- [CIFAR-100 using MobilenetV2](https://github.com/saeyoon17/cifar-100-tvault-example)
+Start by inserting `tvault.log()` in your code's training loop. 
 
 
-
+This creates a folder `model_log` under your current directory
