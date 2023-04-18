@@ -13,7 +13,7 @@
 </p>
 
 <h3 align="center">
-    Compare and store Pytoch models in a local, lightweight registry
+    Compare Pytorch models in a local, lightweight registry
 </h3>
 
 ----
