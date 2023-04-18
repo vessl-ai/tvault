@@ -18,11 +18,9 @@
 
 ----
 
-## The challenges we are tackling
+`tvault` is designed to help academic researchers iterate their models faster without the logging overheads. 
 
-`tvault` is designed to help academic researchers iterate their models faster without the logging overhead. 
-
-Many of the academic researchers we encounter simply want to *get going* with minimum setup and configurations. This often means using local codebase as opposed to integrating tools like [VESSL Experiments](https://docs.vessl.ai/api-reference/python-sdk/utils/vessl.log) and Weights & Biases to git-committed code. 
+Many of the academic researchers we encounter simply want to *get going* with minimum setup and configurations. This often means using local codebase as opposed to integrating tools like [VESSL Experiments](https://docs.vessl.ai/api-reference/python-sdk/utils/vessl.log) and Weights & Biases to git-committed codes. 
 
 `tvault` is "git diff for ML" &mdash; a simple, lightweight framework for quickly tracking and comparing ML experiments in a local model registry. 
 
@@ -82,6 +80,24 @@ tvault --find_flag --condition tag --tag_type size --tag 0.5x
 
 ## Compare models with `tvault --diff_flag`
 
-`tvault`'s `diff_flag` option allows you to look up difference of two models by specifying model hash and index. tvault automatically detects functions that are realated to model, which removes git diffs that are not related to model.
+`tvault`'s `diff_flag` option allows you to look up difference of two models by specifying model hash and index. `tvault` automatically detects and displays the changes in functions while removing git diffs are not related to the model. 
 
 This is useful when you have a baseline model that you want to iterate with different hyperparameters and higher-level architectures without digging through your code line-by-line. 
+
+The following command, for example, provides the model difference between models in between two commits.
+```
+tvault --diff_flag --sha1 f407ed0 --index1 0 --sha2 737b47a --index2 0
+```
+<img alt="tvault-model_log" src="">
+
+`tvault` can also get the diff related to the optimizers.
+
+## Issues, feature requests, and questions
+
+We are excited to hear your feedback!
+* For issues and feature requests, please open a GitHub issue.
+* For questions, please use GitHub Discussions.
+
+For general discussions, join us on VESSL's community Slack.
+
+For those who are looking for a full-fledged, fully managed experiment tracking and model registry visit us at https://vessl.ai.
