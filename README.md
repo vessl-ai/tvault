@@ -102,4 +102,5 @@ We are excited to hear your feedback!
 ## VESSL for Academics
 
 <img alt="tvault-model_log" src="">
+
 Our free academic plan is dedicated to help graduate students set up a modern ML research workflow with zero maintenance overheads. [Learn more](https://vesslai.notion.site/VESSL-for-Academics-fa47bf5e69b44e92b5daaead758cb057).
