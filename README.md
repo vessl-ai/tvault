@@ -97,7 +97,9 @@ tvault --diff_flag --sha1 f407ed0 --index1 0 --sha2 737b47a --index2 0
 We are excited to hear your feedback!
 * For issues and feature requests, please open a GitHub issue.
 * For questions, please use GitHub Discussions.
+* For general discussions, join our community Slack.
 
-For general discussions, join us on VESSL's community Slack.
+## VESSL for Academics
 
-For those who are looking for a full-fledged, fully managed experiment tracking and model registry visit us at https://vessl.ai.
+<img alt="tvault-model_log" src="">
+Our free academic plan is dedicated to help graduate students set up a modern ML research workflow with zero maintenance overheads. [Leanrn more](https://vesslai.notion.site/VESSL-for-Academics-fa47bf5e69b44e92b5daaead758cb057#c1146bd05b8a4d2dac38be04482cd8c1). 
