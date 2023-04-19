@@ -27,7 +27,7 @@ Many of the academic researchers we encounter simply want to *get going* with mi
 * Track and version models locally with `tvault.log_all()`
 * Get a birds-eye differences of two experiments with `tvault --diff_flag`
 
-<img alt="tvault-model_log" src="">
+<img alt="tvault-diff" src="https://user-images.githubusercontent.com/97027715/232963478-b4dbed5a-b380-4929-b71b-c01121899574.gif">
 
 Get started with pip install:
 ```
@@ -39,7 +39,7 @@ For those who are already using VESSL Python SDK and CLI,
 pip install "vessl[tvault]"
 ```
 
-Follow our guide below with our [MNIST example code](https://github.com/saeyoon17/mnist-tvault-example/blob/main/train.py). 
+Follow our guide below with our [MNIST example code](https://github.com/vessl-ai/tvault/blob/1a6b5e038ff3fd4780a186bec7a555215a5e3c31/assets/mnist-train.py).
 
 ## Getting started with `tvault.log()`
 
@@ -51,8 +51,6 @@ https://github.com/vessl-ai/tvault/blob/4bebfe48594b00597889b2696dcec532d72b33d4
 * A folder `model_log` under your current directory - a tracking dashboard or model registry for your code
 * A unique hash for the model and model ID for each training run with the key metrics
 
-<img alt="tvault-model_log" src="">
-
 ## Look up experiments with `tvault --flag_flag`
 
 `tvault`'s `find_flag` option allows you to look up different expereiments with simple cli. find_flag offers three different ways of exploring results:
@@ -62,21 +60,21 @@ The command below shows all experiments with the hash value of  `2ba4adf`.
 ```
 tvault --find_flag --condition hash --hash 2ba4adf shows all experiments with hash 2ba4adf.
 ```
-<img alt="tvault-model_log" src="">
+<img alt="tvault-diff-hash" src="https://user-images.githubusercontent.com/97027715/232963946-ca830858-c215-4c6c-a798-3266df76ba37.gif">
 
   2. Search by result
 The command below shows all experiments with the result between `50` and `100`.
 ```
 tvault --find_flag --condition result --min 90 --max 100
 ```
-<img alt="tvault-model_log" src="">
+<img alt="tvault-diff-result" src="https://user-images.githubusercontent.com/97027715/232963947-4f8b222c-b573-4cb4-aabe-5a4589614ec8.gif">
 
   3. Search by tags
 The command below shows all experiments tagged as `0.5x`.
 ```
 tvault --find_flag --condition tag --tag_type size --tag 0.5x
 ```
-<img alt="tvault-model_log" src="">
+<img alt="tvault-diff-tag" src="https://user-images.githubusercontent.com/97027715/232963949-57cc88de-f5a9-440e-a447-8a8d412e8a5b.gif">
 
 ## Compare models with `tvault --diff_flag`
 
@@ -88,7 +86,7 @@ The following command, for example, provides the model difference between models
 ```
 tvault --diff_flag --sha1 f407ed0 --index1 0 --sha2 737b47a --index2 0
 ```
-<img alt="tvault-model_log" src="">
+<img alt="tvault-diff" src="https://user-images.githubusercontent.com/97027715/232963478-b4dbed5a-b380-4929-b71b-c01121899574.gif">
 
 `tvault` can also get the diff related to the optimizers.
 
@@ -103,4 +101,4 @@ We are excited to hear your feedback!
 
 <img alt="tvault-model_log" src="">
 
-Our free academic plan is dedicated to help graduate students set up a modern ML research workflow with zero maintenance overheads. [Learn more](https://vesslai.notion.site/VESSL-for-Academics-fa47bf5e69b44e92b5daaead758cb057).
+Our free academic plan is dedicated to help graduate students set up a modern ML research workflow with zero maintenance overheads. [Learn more](https://vesslai.notion.site/VESSL-for-Academics-fa47bf5e69b44e92b5daaead758cb057) about VESSL's full-fledged, fully-managed job scheduler and experiment tracking.
