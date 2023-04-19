@@ -51,6 +51,8 @@ https://github.com/vessl-ai/tvault/blob/4bebfe48594b00597889b2696dcec532d72b33d4
 * A folder `model_log` under your current directory - a tracking dashboard or model registry for your code
 * A unique hash for the model and model ID for each training run with the key metrics
 
+<img alt="tvault-model" src="https://user-images.githubusercontent.com/97027715/232966704-b01ae877-a39e-4f9e-be19-148c69259485.gif">
+
 ## Look up experiments with `tvault --flag_flag`
 
 `tvault`'s `find_flag` option allows you to look up different expereiments with simple cli. find_flag offers three different ways of exploring results:
