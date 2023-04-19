@@ -53,7 +53,7 @@ https://github.com/vessl-ai/tvault/blob/4bebfe48594b00597889b2696dcec532d72b33d4
 
 <img alt="tvault-model" src="https://user-images.githubusercontent.com/97027715/232966704-b01ae877-a39e-4f9e-be19-148c69259485.gif">
 
-## Look up experiments with `tvault --flag_flag`
+## Look up experiments with `tvault --find_flag`
 
 `tvault`'s `find_flag` option allows you to look up different expereiments with simple cli. find_flag offers three different ways of exploring results:
 
