@@ -44,7 +44,7 @@ Follow our guide below with our [MNIST example code](https://github.com/saeyoon1
 ## Getting started with `tvault.log()`
 
 Insert `tvault.log()` in your code's training loop with the metrics you want to track as tags.
-https://github.com/vessl-ai/tvault/blob/4dd2f972a2c393b9ea3e70683c57b501a58c264f/setup.py#L5-L7
+https://github.com/vessl-ai/tvault/blob/4bebfe48594b00597889b2696dcec532d72b33d4/assets/mnist-train.py#L145-L146
 
 `tvault.log()` will automatically create the following:
 
