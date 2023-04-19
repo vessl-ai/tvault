@@ -13,7 +13,7 @@ setup(
     description="Log and find diffs between pytorch models",
     author="Saeyoon Oh",
     author_email="david@vessl.ai",
-    url="https://github.com/saeyoon17/tvault",
+    url="https://github.com/vessl-ai/tvault.git",
     license="MIT",
     packages=find_packages("src"),
     package_dir={"": "src"},
