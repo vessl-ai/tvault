@@ -76,8 +76,8 @@ cli utils
 
 
 @click.command()
-@click.option("--find", is_flag=True, default=False, help="tvault cli for tvault.find")
-@click.option("--diff", is_flag=True, default=False, help="tvault cli for tvault.diff")
+@click.option("--find_flag", is_flag=True, default=False, help="tvault cli for tvault.find")
+@click.option("--diff_flag", is_flag=True, default=False, help="tvault cli for tvault.diff")
 # options for find
 @click.option("--log_dir", type=str, default="./model_log")
 @click.option("--model_dir", type=str, default="./")
@@ -93,8 +93,8 @@ cli utils
 @click.option("--sha2", type=str, default="")
 @click.option("--index2", type=int, default=0)
 def cli_main(
-    find,
-    diff,
+    find_flag,
+    diff_flag,
     log_dir,
     model_dir,
     condition,
@@ -108,9 +108,9 @@ def cli_main(
     sha2,
     index2,
 ):
-    if find:
+    if find_flag:
         find_f(log_dir, model_dir, condition, hash, tag_type, tag, min, max)
-    elif diff:
+    elif diff_flag:
         diff_f(sha1, index1, sha2, index2, ask_gpt=False, log_dir=log_dir)
     else:
         print("tvault: not implemented")
