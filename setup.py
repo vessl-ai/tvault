@@ -9,7 +9,7 @@ def read_reqs(name):
 
 setup(
     name="tvault",
-    version="0.3.13",
+    version="0.3.14",
     description="Log and find diffs between pytorch models",
     author="Saeyoon Oh",
     author_email="david@vessl.ai",

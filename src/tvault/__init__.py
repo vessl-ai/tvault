@@ -21,7 +21,7 @@ def log_optimizer(optimizer, log_dir="./model_log", model_dir="./"):
     vault.log_optimizer(optimizer)
 
 
-def diff(sha1="", index1=-1, sha2="", index2=-1, ask_gpt=False, log_dir="./model_log"):
+def diff_f(sha1="", index1=-1, sha2="", index2=-1, ask_gpt=False, log_dir="./model_log"):
     # def diff(self, sha1="", index1=-1, sha2="", index2=-1, out=False, ask_gpt=False)
     vault = TorchVault(log_dir)
     vault.diff(sha1, index1, sha2, index2, ask_gpt)
@@ -55,7 +55,7 @@ Other utils
 """
 
 
-def find(
+def find_f(
     log_dir="./model_log",
     model_dir="./",
     condition="hash",
@@ -76,8 +76,8 @@ cli utils
 
 
 @click.command()
-@click.option("--find_flag", is_flag=True, default=False, help="tvault cli for tvault.find")
-@click.option("--diff_flag", is_flag=True, default=False, help="tvault cli for tvault.diff")
+@click.option("--find", is_flag=True, default=False, help="tvault cli for tvault.find")
+@click.option("--diff", is_flag=True, default=False, help="tvault cli for tvault.diff")
 # options for find
 @click.option("--log_dir", type=str, default="./model_log")
 @click.option("--model_dir", type=str, default="./")
@@ -93,8 +93,8 @@ cli utils
 @click.option("--sha2", type=str, default="")
 @click.option("--index2", type=int, default=0)
 def cli_main(
-    find_flag,
-    diff_flag,
+    find,
+    diff,
     log_dir,
     model_dir,
     condition,
@@ -108,9 +108,9 @@ def cli_main(
     sha2,
     index2,
 ):
-    if find_flag:
-        find(log_dir, model_dir, condition, hash, tag_type, tag, min, max)
-    elif diff_flag:
-        diff(sha1, index1, sha2, index2, ask_gpt=False, log_dir=log_dir)
+    if find:
+        find_f(log_dir, model_dir, condition, hash, tag_type, tag, min, max)
+    elif diff:
+        diff_f(sha1, index1, sha2, index2, ask_gpt=False, log_dir=log_dir)
     else:
         print("tvault: not implemented")
