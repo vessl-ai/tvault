@@ -34,7 +34,7 @@ Get started with pip install:
 pip install tvault
 ```
 
-For those who are already using VESSL Python SDK and CLI,
+For those who are already using [VESSL Python SDK and CLI](https://docs.vessl.ai/api-reference/what-is-the-vessl-cli-sdk),
 ```
 pip install "vessl[tvault]"
 ```
