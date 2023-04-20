@@ -41,6 +41,9 @@ pip install "vessl[tvault]"
 
 Follow our guide below with our [MNIST example code](https://github.com/vessl-ai/tvault/blob/1a6b5e038ff3fd4780a186bec7a555215a5e3c31/assets/mnist-train.py).
 
+----
+<br>
+
 ## Getting started with `tvault.log()`
 
 Insert `tvault.log()` in your code's training loop with the metrics you want to track as tags.
