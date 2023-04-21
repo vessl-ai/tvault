@@ -18,7 +18,7 @@
 
 ----
 
-`tvault` is designed to help academic researchers iterate their models faster without the logging overheads. 
+`tvault` is designed to help academic researchers iterate their models faster without logging overheads. 
 
 Many of the academic researchers we encounter simply want to *get going* with minimum setup and configurations. This often means using local codebase as opposed to integrating tools like [VESSL Experiments](https://docs.vessl.ai/api-reference/python-sdk/utils/vessl.log) and Weights & Biases to git-committed codes. 
 
