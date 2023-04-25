@@ -58,7 +58,7 @@ https://github.com/vessl-ai/tvault/blob/4bebfe48594b00597889b2696dcec532d72b33d4
 
 ## Look up experiments with `tvault --find_flag`
 
-`tvault`'s `find_flag` option allows you to look up different expereiments with simple cli. find_flag offers three different ways of exploring results:
+`tvault`'s `find_flag` option allows you to look up different experiments with a simple CLI command. `find_flag` offers three different ways of exploring results:
 
   1. Search by hash
 The command below shows all experiments with the hash value of  `2ba4adf`. 
@@ -83,7 +83,7 @@ tvault --find_flag --condition tag --tag_type size --tag 0.5x
 
 ## Compare models with `tvault --diff_flag`
 
-`tvault`'s `diff_flag` option allows you to look up difference of two models by specifying model hash and index. `tvault` automatically detects and displays the changes in functions while removing git diffs are not related to the model. 
+`tvault`'s `diff_flag` option allows you to look up the difference of two models by specifying the model hash and index. `tvault` automatically detects and displays the changes in functions while removing git diffs that are not related to the model.
 
 This is useful when you have a baseline model that you want to iterate with different hyperparameters and higher-level architectures without digging through your code line-by-line. 
 
