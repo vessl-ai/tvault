@@ -60,22 +60,19 @@ https://github.com/vessl-ai/tvault/blob/4bebfe48594b00597889b2696dcec532d72b33d4
 
 `tvault`'s `find_flag` option allows you to look up different experiments with a simple CLI command. `find_flag` offers three different ways of exploring results:
 
-  1. Search by hash
-The command below shows all experiments with the hash value of  `2ba4adf`. 
+  1. Search by hash &mdash; The command below shows all experiments with the hash value of  `2ba4adf`. 
 ```
-tvault --find_flag --condition hash --hash 2ba4adf shows all experiments with hash 2ba4adf.
+tvault --find_flag --condition hash --hash 2ba4adf
 ```
 <img alt="tvault-diff-hash" src="https://user-images.githubusercontent.com/97027715/232963946-ca830858-c215-4c6c-a798-3266df76ba37.gif">
 
-  2. Search by result
-The command below shows all experiments with the result between `50` and `100`.
+  2. Search by result &mdash; The command below shows all experiments with the result between `50` and `100`.
 ```
 tvault --find_flag --condition result --min 90 --max 100
 ```
 <img alt="tvault-diff-result" src="https://user-images.githubusercontent.com/97027715/232963947-4f8b222c-b573-4cb4-aabe-5a4589614ec8.gif">
 
-  3. Search by tags
-The command below shows all experiments tagged as `0.5x`.
+  3. Search by tags &mdash; The command below shows all experiments tagged as `0.5x`.
 ```
 tvault --find_flag --condition tag --tag_type size --tag 0.5x
 ```
