@@ -13,7 +13,7 @@
 </p>
 
 <h3 align="center">
-    Quickly compare Pytorch models in a local, lightweight registry
+    Quickly compare PyTorch models in a local, lightweight registry
 </h3>
 
 ----
