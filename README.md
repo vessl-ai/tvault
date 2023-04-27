@@ -83,8 +83,6 @@ tvault --find_flag --condition tag --tag_type size --tag 0.5x
 `tvault`'s `diff_flag` option allows you to look up the difference of two models by specifying the model hash and index. `tvault` automatically detects and displays the changes in functions while removing git diffs that are not related to the model.
 
 This is useful when you have a baseline model that you want to iterate with different hyperparameters and higher-level architectures without digging through your code line-by-line. 
-
-The following command, for example, provides the model difference between models in between two commits.
 ```
 tvault --diff_flag --sha1 f407ed0 --index1 0 --sha2 737b47a --index2 0
 ```
